@@ -35,6 +35,8 @@
   --btn-hover-color: #6d7a88;
   --bg-white: #fff;
   --bg-light: #f7f9fc;
+
+  --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
 }
 
 body {
@@ -63,11 +65,10 @@ h1 {
 h2 {
   font-family: var(--heading-font);
   font-weight: 500;
-  font-size: var(--h2-size);
+  font-size: var(--h3-size);
   margin: 0;
   width: 100%;
-  letter-spacing: -0.25px;
-  line-height: var(--h2-height);
+  font-weight: 600;
 }
 h3 {
   font-family: var(--heading-font);
@@ -217,6 +218,27 @@ p {
   justify-content: center;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) 0;
+}
+
+.card .icon {
+  height: 50px;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.card h3 {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: var(--h6-size);
+  margin: 0;
+  width: 100%;
+}
+
 /*NAVBAR*/
 
 .navbar {
@@ -295,4 +317,110 @@ main {
 .partnerGrid img {
   height: 60px;
   place-self: center;
+}
+
+/*UNIFIED SECTION*/
+
+.unifiedPlatform {
+  padding: var(--spacing-xl) 0;
+}
+
+.unifiedPlatform .primaryBtn {
+  background-color: var(--purple-1);
+  margin: var(--spacing-md) 0;
+}
+
+.unifiedPlatform .primaryBtn:hover {
+  background-color: var(--primary-accent);
+}
+.unifiedPlatform h2 {
+  width: 50%;
+  margin-bottom: var(--spacing-md);
+}
+
+/*GRAPHIC SECTION*/
+
+.graphicGrid {
+  display: grid;
+  grid-template-areas:
+    "card slack slack"
+    "phone slack slack"
+    "phone dash dash";
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg) 0;
+}
+
+#credit-card {
+  grid-area: card;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+#slack-invoice {
+  grid-area: slack;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+#phone {
+  grid-area: phone;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+#dash {
+  grid-area: dash;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+
+/*INTEGRATION SECTION*/
+
+.integretaionSection {
+  color: var(--text-light);
+  background-color: var(--primary-accent);
+}
+.integretaionSection .cardContainer {
+  display: flex;
+  margin: var(--spacing-lg) 0;
+}
+.integretaionSection .cardContainer .card {
+  width: 50%;
+}
+
+.integretaionSection .primaryBtn {
+  background-color: var(--blue-1);
+  color: var(--primary-accent);
+  margin: var(--spacing-md) 0 0 0;
+}
+
+.integretaionSection .primaryBtn:hover {
+  background-color: var(--bg-white);
+}
+
+.integretaionSection .secondaryBtn {
+  color: var(--blue-1);
+}
+#api-code {
+  max-width: 470px;
+  margin: 0 0 var(--spacing-md) 0;
+  border-radius: 20px;
+}
+#terminal-code {
+  max-width: 470px;
+  border-radius: 20px;
+}
+
+/*WHY SWIPE SECTION*/
+
+.whySwipeSection .cardContainer {
+  display: flex;
+  margin: var(--spacing-lg) 0;
+}
+
+.whySwipeSection .cardContainer .card {
+  width: 25%;
+  padding: 0 var(--spacing-sm) 0 0;
+  margin: 0 var(--spacing-md) 0 0;
+  box-sizing: border-box;
+}
+.whySwipeSection .secondaryText {
+  color: var(--text-dark);
 }
