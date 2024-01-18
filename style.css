@@ -255,6 +255,7 @@ p {
   width: 100%;
   max-width: var(--standard-width);
   padding: 0 var(--spacing-md);
+  margin: 0 0 var(--spacing-xl) 0;
 }
 
 .menu {
@@ -281,6 +282,23 @@ p {
 .navbarBtn:hover {
   background: rgba(250, 250, 250, 0.5);
 }
+
+/*ANIMATED STRIPE*/
+
+#gradient {
+  width: 200%;
+  height: 970px;
+  transform: rotate(-10deg);
+  position: absolute;
+  top: -600px;
+  left: -50%;
+  z-index: -1;
+  --gradient-color-1: #ef008f;
+  --gradient-color-2: #6ec3f4;
+  --gradient-color-3: #7038ff;
+  --gradient-color-4: #ffba27;
+}
+
 /*HERO*/
 .hero {
   width: 100%;
@@ -344,6 +362,7 @@ main {
   display: flex;
   justify-content: center;
   padding: var(--spacing-xl) 0;
+  background-color: var(--bg-light);
 }
 
 .unifiedPlatform .primaryBtn {
@@ -365,6 +384,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: var(--bg-white);
 }
 
 .graphicGrid {
@@ -380,17 +400,17 @@ main {
 #credit-card {
   grid-area: card;
   width: 100%;
-  box-shadow: var(--standard-box-shadow);
+  /* box-shadow: var(--standard-box-shadow); */
 }
 #slack-invoice {
   grid-area: slack;
   width: 100%;
-  box-shadow: var(--standard-box-shadow);
+  /* box-shadow: var(--standard-box-shadow); */
 }
 #phone {
   grid-area: phone;
   width: 100%;
-  box-shadow: var(--standard-box-shadow);
+  /* box-shadow: var(--standard-box-shadow); */
 }
 #dash {
   grid-area: dash;
@@ -405,8 +425,23 @@ main {
   display: flex;
   justify-content: center;
   color: var(--text-light);
-  background-color: var(--primary-accent);
+  position: relative;
+  padding: calc(var(--spacing-xl) * 3) 0;
+  z-index: 1;
 }
+
+.integretaionSection::before {
+  content: "";
+  width: 100%;
+  height: 1100px;
+  background-color: var(--primary-accent);
+  position: absolute;
+  top: -32px;
+  left: 0;
+  z-index: -1;
+  transform: skewY(-10deg);
+}
+
 .integretaionSection .cardContainer {
   display: flex;
   margin: var(--spacing-lg) 0;
@@ -444,6 +479,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: calc(var(--spacing-xl) * 3) 0;
 }
 
 .whySwipeSection .cardContainer {
@@ -464,15 +500,26 @@ main {
 /*GLOBAL SECTION*/
 
 .globalSection {
-  background-color: var(--primary-accent);
   width: 100%;
   display: flex;
   justify-content: center;
   color: var(--text-light);
   position: relative;
-  padding: calc(var(--spacing-xl) * 3) 0;
-  overflow: hidden;
+  padding: calc(var(--spacing-xl) * 3) 0 0 0;
 }
+
+.globalSection::before {
+  content: "";
+  width: 100%;
+  height: 1200px;
+  background-color: var(--primary-accent);
+  position: absolute;
+  top: -32px;
+  left: 0;
+  z-index: -1;
+  transform: skewY(-10deg);
+}
+
 .globalSection a {
   color: var(--blue-1);
 }
@@ -500,7 +547,7 @@ main {
 }
 
 #globeImg {
-  max-width: 844px;
+  max-width: 700px;
   opacity: 25%;
   position: absolute;
   top: 10%;
@@ -512,6 +559,17 @@ main {
   display: flex;
   justify-content: center;
   padding: calc(var(--spacing-xl) * 3) 0;
+  position: relative;
+}
+
+.virutalSection::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-white);
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 
 .virutalSection .primaryBtn {
