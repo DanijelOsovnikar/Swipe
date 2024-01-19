@@ -1,4 +1,5 @@
 :root {
+  /*TEXT VARIABLES*/
   --text-dark: #000;
   --text-light: #fff;
   --text-gray: #adbdcc;
@@ -19,7 +20,6 @@
   --secondary-text-size: 14px;
   --secondary-text-height: 18px;
   --button-size: 16px;
-
   --standard-width: 1144px;
 
   /*SPACING*/
@@ -27,7 +27,7 @@
   --spacing-md: 16px;
   --spacing-lg: 32px;
   --spacing-xl: 64px;
-
+  /*COLOR VARIABLES*/
   --purple-1: #6962f7;
   --purple-2: #7000ff;
   --blue-1: #00d4ff;
@@ -44,6 +44,13 @@
     #36c5f0 76.92%,
     #83e2ff 96.96%
   );
+}
+
+html,
+body {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
 
 body {
@@ -256,6 +263,7 @@ p {
   max-width: var(--standard-width);
   padding: 0 var(--spacing-md);
   margin: 0 0 var(--spacing-xl) 0;
+  box-sizing: border-box;
 }
 
 .menu {
@@ -281,6 +289,10 @@ p {
 
 .navbarBtn:hover {
   background: rgba(250, 250, 250, 0.5);
+}
+
+.hamburger {
+  display: none;
 }
 
 /*ANIMATED STRIPE*/
@@ -400,22 +412,24 @@ main {
 #credit-card {
   grid-area: card;
   width: 100%;
-  /* box-shadow: var(--standard-box-shadow); */
+  box-shadow: var(--standard-box-shadow);
+  border-radius: 20px;
 }
 #slack-invoice {
   grid-area: slack;
   width: 100%;
-  /* box-shadow: var(--standard-box-shadow); */
+  box-shadow: var(--standard-box-shadow);
+  border-radius: 20px;
 }
 #phone {
   grid-area: phone;
   width: 100%;
-  /* box-shadow: var(--standard-box-shadow); */
 }
 #dash {
   grid-area: dash;
   width: 100%;
   box-shadow: var(--standard-box-shadow);
+  border-radius: 20px;
 }
 
 /*INTEGRATION SECTION*/
@@ -740,4 +754,301 @@ main {
 .footer h3 {
   font-size: var(--h6-size);
   font-weight: 700;
+}
+
+@media only screen and (max-width: 1144px) {
+  .sectionContainer {
+    padding: 0 var(--spacing-md);
+  }
+
+  .hero .left {
+    width: 60%;
+  }
+  .hero .right {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  :root {
+    --h1-size: 78px;
+    --h1-height: 80px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .partnerGrid img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero .left {
+    width: 60%;
+  }
+  .hero .right {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hero .heroPhone {
+    height: 550px;
+  }
+
+  .hero .left {
+    width: 70%;
+  }
+  .hero .right {
+    width: 30%;
+  }
+}
+/*TABLET SIZE*/
+@media only screen and (max-width: 768px) {
+  :root {
+    --h1-size: 58px;
+    --h1-height: 65px;
+    --h3-size: 34px;
+  }
+
+  #gradient {
+    height: 820px;
+  }
+
+  .navbar .menu {
+    display: none;
+  }
+  .navbar .navbarBtn {
+    display: none;
+  }
+
+  .hamburger {
+    width: 50px;
+    height: 30px;
+    background-color: rgba(250, 250, 250, 0.25);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hamburger .bar {
+    width: 20px;
+    height: 2px;
+    background-color: var(--bg-white);
+    margin: 2px 0;
+    border-radius: 5px;
+  }
+  .navbar {
+    margin: var(--spacing-md) 0 0 0;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  .hero .twoColumn {
+    align-items: center;
+  }
+
+  .hero .right {
+    width: 40%;
+  }
+
+  .hero .left {
+    width: 60%;
+  }
+
+  .hero .heroPhone {
+    height: 450px;
+    transform: translateX(32px);
+  }
+
+  .unifiedPlatform {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .unifiedPlatform h2 {
+    width: 100%;
+  }
+  .integretaionSection {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .integretaionSection .cardContainer {
+    flex-direction: column;
+  }
+  .integretaionSection .cardContainer .card {
+    width: 100%;
+  }
+
+  .whySwipeSection {
+    padding: 0 0 var(--spacing-xl) 0;
+  }
+
+  .whySwipeSection .cardContainer {
+    flex-wrap: wrap;
+  }
+
+  .whySwipeSection .cardContainer .card {
+    width: 50%;
+    margin: 0;
+    margin: var(--spacing-md) 0;
+  }
+
+  .whySwipeSection .cardContainer .card img {
+    height: 50px;
+  }
+
+  .globalSection {
+    padding: var(--spacing-xl) 0 0 0;
+  }
+
+  .globalSection .cardContainer {
+    flex-wrap: wrap;
+    margin: var(--spacing-xl) 0;
+  }
+
+  .globalSection .cardContainer .card {
+    width: 50%;
+    margin: var(--spacing-md) 0;
+  }
+
+  .virutalSection {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .gettingStartedSection .right {
+    flex-wrap: wrap;
+  }
+
+  .gettingStartedSection .right .card {
+    width: 100%;
+    margin: var(--spacing-md) 0;
+  }
+
+  .gettingStartedSection .twoColumn {
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .hero .left {
+    width: 70%;
+  }
+  .hero .right {
+    width: 30%;
+  }
+  .hero .heroPhone {
+    height: 400px;
+  }
+}
+
+/*MOBILE SIZE*/
+@media only screen and (max-width: 550px) {
+  :root {
+    --h1-size: 58px;
+    --h1-height: 65px;
+    --h3-size: 34px;
+  }
+
+  #gradient {
+    height: 820px;
+  }
+
+  .navbar {
+    margin: var(--spacing-md) 0 var(--spacing-lg) 0;
+  }
+
+  main {
+    margin: var(--spacing-lg) 0 0 0;
+  }
+
+  .hero .right {
+    display: none;
+  }
+
+  .twoColumn {
+    flex-direction: column;
+  }
+  .twoColumn .left {
+    width: 100%;
+  }
+  .twoColumn .right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .partnerGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .unifiedPlatform h2 {
+    width: 100%;
+  }
+  #terminal-code {
+    display: none;
+  }
+
+  #api-code {
+    max-width: 100%;
+  }
+
+  .whySwipeSection .cardContainer .card {
+    width: 100%;
+    margin: var(--spacing-sm) 0;
+  }
+
+  .whySwipeSection .cardContainer .card img {
+    height: 35px;
+  }
+
+  .globalSection .cardContainer .card {
+    width: 100%;
+    margin: var(--spacing-sm) 0;
+  }
+  #globeImg {
+    opacity: 10%;
+  }
+
+  .virutalSection .swipeCard {
+    width: 100%;
+    margin: var(--spacing-md) 0;
+  }
+
+  .virutalSection .left {
+    padding: 0;
+  }
+
+  .virutalSection .swipeCard .secondaryText {
+    width: 100%;
+  }
+
+  .virutalSection .swipeCard .cardTop {
+    height: 40%;
+  }
+
+  #sessionsLogo {
+    width: 300px;
+  }
+
+  .footer .sectionContainer {
+    flex-wrap: wrap;
+  }
+
+  .footer .col {
+    width: 50%;
+    margin: var(--spacing-md) 0;
+  }
+
+  .footer .col a {
+    font-size: 14px;
+  }
+
+  .footer .iconLink img {
+    width: 18px;
+  }
+
+  #footerLogo {
+    width: 70px;
+  }
 }
