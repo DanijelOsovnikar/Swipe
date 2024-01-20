@@ -870,12 +870,54 @@ main {
     align-items: center;
   }
 
-  .hamburger .bar {
+  .hamburger .bar1,
+  .bar2,
+  .bar3 {
     width: 20px;
     height: 2px;
     background-color: var(--bg-white);
     margin: 2px 0;
     border-radius: 5px;
+  }
+  .animateBar1 {
+    animation: flipBar1 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .animateBar2 {
+    animation: fadeBar2 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .animateBar3 {
+    animation: flipBar3 0.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes flipBar1 {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(45deg) translate(4px, 4px);
+    }
+  }
+
+  @keyframes fadeBar2 {
+    from {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+    to {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes flipBar3 {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(-45deg) translate(4px, -4px);
+    }
   }
 
   .navbar {
