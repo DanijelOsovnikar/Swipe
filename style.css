@@ -50,7 +50,7 @@ html,
 body {
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
